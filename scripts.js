@@ -69,7 +69,7 @@ class Car {
 }
 
 //this is my array of cars that I access using a loop to gather and display all the data!
-const cars = [
+let cars = [
   new Car(
     "Mini Cooper S",
     2005,
@@ -169,29 +169,28 @@ const cars = [
 ];
 
 //this section is my different sorting methods that show up in the drop down menu later
-function _sortAZ() {
+function sortAZ() {
   cars.sort((a, b) => a.name.localeCompare(b.name));
   showCards();
 }
 
 // Function to sort cars by name (Z-A)
-function _sortZA() {
+function sortZA() {
   cars.sort((a, b) => b.name.localeCompare(a.name));
   showCards();
 }
 
 // Function to sort cars by year
-function _sortByYearOld2New() {
+function sortByYearOld2New() {
   cars.sort((a, b) => a.year - b.year);
   showCards();
 }
 
-function _sortByYearNew2Old() {
+function sortByYearNew2Old() {
   cars.sort((a, b) => b.year - a.year);
   showCards();
 }
-
-const titles = cars.map((car) => car.getName());
+let titles = cars.map((car) => car.getName());
 
 // Extracting names from cars array
 titles.sort((a, b) => a.localeCompare(b));
@@ -200,7 +199,7 @@ titles.sort((a, b) => a.localeCompare(b));
 // you should use more than just an array of strings to store it all.
 
 // This function adds cards to the page to display the data in the array
-function _showCards() {
+function showCards() {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
@@ -222,7 +221,7 @@ function _showCards() {
   }
 }
 //this method was already here I just added some more stuff to the card
-function _editCardContent(
+function editCardContent(
   card,
   newTitle,
   newImageURL,
@@ -264,12 +263,12 @@ function _editCardContent(
 document.addEventListener("DOMContentLoaded", showCards);
 
 //I kept these just because they were already there :)
-function _quoteAlert() {
+function quoteAlert() {
   console.log("Button Clicked!");
   alert("I love all these cool cars!! thank youUUU");
 }
 
-function _removeLastCard() {
+function removeLastCard() {
   cars.pop(); // Remove last item in titles array
   showCards(); // Call showCards again to refresh
 }
