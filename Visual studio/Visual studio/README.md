@@ -1,6 +1,0 @@
-# SEA-CarJam
-this is my final repository I thought that github was just a way to post your projects online, I didnt know that it sort of follows your progress I added a lot of comments inbetween I dont know if I still submit this what I submitted in the form was a google drive file with the files that are in this repository, you can see that there are no changes that could have been done in the time between submissions iwas just having issues with github and submission I hope Im still cosidered
-
-My website called CarJam is a website with my me and my friend's and family's favorite cars and the our favorite songs accosiated with them! I spend most of my time in the javascript becuase I had a better grasp of that rather than the HTML and CSS I included different sorting methods in a drop down so there's opperators for my data.
-
-for my data I created a Car class that contains name color top speed and image and three songs, the options for sorting are A-Z Z-A and by year oldest to newest and newest to oldest. I hope you enjoy looking at my thought proccess!
