@@ -69,7 +69,7 @@ class Car {
 }
 
 //this is my array of cars that I access using a loop to gather and display all the data!
-let cars = [
+const cars = [
   new Car(
     "Mini Cooper S",
     2005,
@@ -169,28 +169,28 @@ let cars = [
 ];
 
 //this section is my different sorting methods that show up in the drop down menu later
-function sortAZ() {
+function _sortAZ() {
   cars.sort((a, b) => a.name.localeCompare(b.name));
   showCards();
 }
 
 // Function to sort cars by name (Z-A)
-function sortZA() {
+function _sortZA() {
   cars.sort((a, b) => b.name.localeCompare(a.name));
   showCards();
 }
 
 // Function to sort cars by year
-function sortByYearOld2New() {
+function _sortByYearOld2New() {
   cars.sort((a, b) => a.year - b.year);
   showCards();
 }
 
-function sortByYearNew2Old() {
+function _sortByYearNew2Old() {
   cars.sort((a, b) => b.year - a.year);
   showCards();
 }
-let titles = cars.map((car) => car.getName());
+const titles = cars.map((car) => car.getName());
 
 // Extracting names from cars array
 titles.sort((a, b) => a.localeCompare(b));
@@ -199,7 +199,7 @@ titles.sort((a, b) => a.localeCompare(b));
 // you should use more than just an array of strings to store it all.
 
 // This function adds cards to the page to display the data in the array
-function showCards() {
+function _showCards() {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
@@ -216,12 +216,12 @@ function showCards() {
     const music = car.music;
 
     const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, imageURL, speed, year, color, music); // Edit title and image
+    _editCardContent(nextCard, title, imageURL, speed, year, color, music); // Edit title and image
     cardContainer.appendChild(nextCard); // Add new card to the container
   }
 }
 //this method was already here I just added some more stuff to the card
-function editCardContent(
+function _editCardContent(
   card,
   newTitle,
   newImageURL,
@@ -260,15 +260,15 @@ function editCardContent(
 }
 
 // This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+document.addEventListener("DOMContentLoaded", _showCards);
 
 //I kept these just because they were already there :)
-function quoteAlert() {
+function _quoteAlert() {
   console.log("Button Clicked!");
   alert("I love all these cool cars!! thank youUUU");
 }
 
-function removeLastCard() {
+function _removeLastCard() {
   cars.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
+  _showCards(); // Call showCards again to refresh
 }
