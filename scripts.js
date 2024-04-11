@@ -171,24 +171,24 @@ const cars = [
 //this section is my different sorting methods that show up in the drop down menu later
 function _sortAZ() {
   cars.sort((a, b) => a.name.localeCompare(b.name));
-  showCards();
+  _showCards();
 }
 
 // Function to sort cars by name (Z-A)
 function _sortZA() {
   cars.sort((a, b) => b.name.localeCompare(a.name));
-  showCards();
+  _showCards();
 }
 
 // Function to sort cars by year
 function _sortByYearOld2New() {
   cars.sort((a, b) => a.year - b.year);
-  showCards();
+  _showCards();
 }
 
 function _sortByYearNew2Old() {
   cars.sort((a, b) => b.year - a.year);
-  showCards();
+  _showCards();
 }
 const titles = cars.map((car) => car.getName());
 
