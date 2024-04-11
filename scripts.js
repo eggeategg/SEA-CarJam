@@ -191,7 +191,7 @@ function _sortByYearNew2Old() {
   showCards();
 }
 
-let titles = cars.map((car) => car.getName());
+const titles = cars.map((car) => car.getName());
 
 // Extracting names from cars array
 titles.sort((a, b) => a.localeCompare(b));
