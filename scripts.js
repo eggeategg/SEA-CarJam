@@ -174,13 +174,13 @@ function _sortAZ() {
   _showCards();
 }
 
-// Function to sort cars by name (Z-A)
+// Function to sort cards by name (Z-A)
 function _sortZA() {
   cars.sort((a, b) => b.name.localeCompare(a.name));
   _showCards();
 }
 
-// Function to sort cars by year
+// Function to sort cards by year
 function _sortByYearOld2New() {
   cars.sort((a, b) => a.year - b.year);
   _showCards();
@@ -192,7 +192,7 @@ function _sortByYearNew2Old() {
 }
 const titles = cars.map((car) => car.getName());
 
-// Extracting names from cars array
+// Extracting names from cards array
 titles.sort((a, b) => a.localeCompare(b));
 
 // Your final submission should have much more data than this, and
